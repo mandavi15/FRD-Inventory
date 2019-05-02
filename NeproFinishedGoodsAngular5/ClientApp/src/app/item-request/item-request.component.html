@@ -1,0 +1,236 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="card-body pull-right p-1">
+      <button class="btn btn-success btn-sm"><i class="fa fa-file" aria-hidden="true"></i>Report</button>
+      <button class="btn btn-success btn-sm"><i class="fa fa-download" aria-hidden="true"></i>Import</button>
+      <button class="btn btn-success btn-sm" (click)="showhide()"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
+      <button class="btn btn-success btn-sm" (click)="showhide2()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Submit</button>
+
+      <button class="btn btn-success btn-sm" (click)="showhide2()"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
+    </div>
+    <div class="clearfix"></div>
+
+  </div>
+</div>
+<div class="content">
+  <div class="content">
+    <div class="container-fluid">
+
+      <div class="clearfix"></div>
+      <div class="row" *ngIf="show">
+        <div class="col-md-12">
+          <div class="card ">
+            <div class="card-header card-header-rose card-header-text">
+              <div class="card-text">
+                <h4 class="card-title">Item Request Form</h4>
+              </div>
+            </div>
+            <div class="card-body mt-2">
+              <form method="get" class="form-horizontal">
+                <div class="container">
+                  <div class="row mb-2">
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Request Number:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--<div class="col-md-6">
+
+
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Request Name</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>-->
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Created By:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+
+
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Requested Date:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="date" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Branch:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="dropdown">
+                            <div class="form-group">
+                              <div class="form-control">
+                                <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                                  <option> Select</option>
+                                  <option value="2">Warehouse 1</option>
+                                  <option value="3">Warehouse 2</option>
+                                  <option value="4">Warehouse 3</option>
+
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+               
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Submitted Date:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="date" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                 
+                    <!--<div class="col-md-12 ">
+                      <button class="btn pull-right btn-success btn-sm"><i aria-hidden="true" class="fa fa-plus"></i>Add</button>
+                    </div>-->
+                  </div>
+                </div>
+               
+              </form>
+              <div class="table-responsive">
+
+                <ag-grid-angular style="width:100%; height: auto"
+                                 class="ag-theme-balham"
+                                 [rowData]="rowData"
+                                 [columnDefs]="columnDefs"></ag-grid-angular>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="row  mb-5" *ngIf="show">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-text">
+                <h4 class="card-title">Item Request</h4>
+              </div>
+              <h4 class="card-title"></h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+
+                <ag-grid-angular style="width:100%; height: auto"
+                                 class="ag-theme-balham"
+                                 [rowData]="rowData"
+                                 [columnDefs]="columnDefs"></ag-grid-angular>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>-->
+      <div class="row  mb-5" *ngIf="hide">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-text">
+                <h4 class="card-title">Item Request</h4>
+              </div>
+              <h4 class="card-title"></h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+
+                <ag-grid-angular style="width:100%; height: auto"
+                                 class="ag-theme-balham"
+                                 [rowData]="rowData1"
+                                 [columnDefs]="columnDefs1"></ag-grid-angular>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<div class="modal fade" id="myModal1" role="dialog">
+  <div class="modal-dialog modal-sm">
+   
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span class="cross">&times;</span>
+        </button>
+        <h4 class="modal-title modalHead">Copy From</h4>
+      </div>
+  
+       
+      <div class="modal-body">
+
+        <div class="form-check-inline">
+          <label class="form-check-label" style="color: #243a38;">
+            <input type="radio" class="form-check-input" name="optradio" checked>Remaining Quantity
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label" style="color: #243a38;">
+            <input type="radio" class="form-check-input" name="optradio">All Quantity
+          </label>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="dropdown">
+            <div class="form-group">
+              <div class="form-control">
+                <select class="selectpicker" data-size="7" data-style="select-with-transition" title="">
+                  <option> Select</option>
+                  <option value="2" ng-reflect-value="2">Item 1</option>
+                  <option value="3" ng-reflect-value="3">Item 2</option>
+                  <option value="4" ng-reflect-value="4">Item 3</option>
+                  <option value="5" ng-reflect-value="2">Item 4</option>
+                  <option value="6" ng-reflect-value="3">Item 5</option>
+                  <option value="7" ng-reflect-value="4">Item 6</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <div class="modal-footer" style="display: block; text-align: center;">
+            
+            <button class="btn btn-success btn-sm mr-2">Submit</button>
+            <button class="btn btn-success btn-sm">Cancel</button>
+
+          </div>
+        
+      
+      
+      </div>
+
+  </div>
+</div>-->
+

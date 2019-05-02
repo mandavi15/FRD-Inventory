@@ -1,0 +1,162 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="card-body pull-right p-1">
+      <!--<button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Accept</button>-->
+      <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Reject</button>
+      <!--<button class="btn btn-success btn-sm"><i class="fa fa-file" aria-hidden="true"></i>Generate</button>-->
+      <button class="btn btn-success btn-sm"><i class="fa fa-copy" aria-hidden="true"></i>Transfer Order</button>
+     <button class="btn btn-success btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i>Reset</button>
+      <button class="btn btn-success btn-sm"><a [routerLink]='["/requestControl"]' (click)='collapse()'><i class="fa fa-undo" aria-hidden="true"></i>Back</a></button>
+    </div>
+    <div class="clearfix"></div>
+
+  </div>
+</div>
+<div class="content">
+  <div class="content">
+    <div class="container-fluid">
+
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card ">
+            <div class="card-header card-header-rose card-header-text">
+              <div class="card-text">
+                <h4 class="card-title">Request Control Details</h4>
+              </div>
+            </div>
+            <div class="card-body mt-2">
+              <form method="get" class="form-horizontal">
+                <div class="container">
+                  <div class="row mb-2">
+                    <div class="col-md-6">
+
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Request Number:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <label class=" col-form-label">123</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Created By:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <label class=" col-form-label">Fateh</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-2  col-md-4 col-form-label">Requested Date:</label>
+                        <div class="col-sm-9 col-md-8">
+                          <label class=" col-form-label">29/04/2019</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Branch:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <label class=" col-form-label">XYZ</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+
+
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Submitted Date:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <label class=" col-form-label">05/05/2019</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Status:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <label class=" col-form-label">In Progress</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                
+              </form>
+              <div class="table-responsive mt-1">
+
+                <ag-grid-angular data-toggle="modal" data-target="#myModal1" style="width:100%; height: auto"
+                                 class="ag-theme-balham" (rowClicked)="openDialog()"
+                                 [rowData]="rowData1"
+                                 [columnDefs]="columnDefs1"></ag-grid-angular>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+   
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="myModal1" role="dialog" openDialog >
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span class="cross">&times;</span>
+        </button>
+        <h4 class="modal-title modalHead">Configuration Wise Detail</h4>
+      </div>
+      <div class="modal-body">
+        <ag-grid-angular style="width:100%; height: auto"
+                         class="ag-theme-balham"
+                         [rowData]="rowData"
+                         [columnDefs]="columnDefs">
+
+        </ag-grid-angular>
+      </div>
+      <!--<div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm mr-2" data-dismiss="modal">OK</button>
+      </div>-->
+    </div>
+
+  </div>
+</div>
+
+<!--<div class="modal fade" id="myModal2" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+   
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span class="cross">&times;</span>
+        </button>
+        <h4 class="modal-title modalHead">Transfer Order Detail</h4>
+      </div>
+      <div class="modal-body">
+        <ag-grid-angular style="width:100%; height: auto"
+                         class="ag-theme-balham"
+                         [rowData]="rowData2"
+                         [columnDefs]="columnDefs2">
+
+        </ag-grid-angular>
+      </div>
+     
+    </div>
+
+  </div>
+</div>-->
+

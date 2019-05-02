@@ -1,0 +1,155 @@
+.sidebar .logo {
+  background: transparent !important; padding:10px 0 !important
+}
+.sidebar .sidebar-wrapper {
+  height: calc(100vh - 0px) !important;
+}
+.sidebar .sidebar-wrapper {
+  background: rgba(35, 34, 34, 0.7) !important;
+}
+  .navbar-form .input-group > .form-control {
+  width: auto !important;
+}
+.card-title {
+  font-size:.825rem;
+}
+.material-icons {
+  font-family: 'Material Icons' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  letter-spacing: normal !important;
+  text-transform: none;
+  display: inline-block !important;
+  white-space: nowrap !important;
+  word-wrap: normal;
+  direction: ltr !important;
+  -webkit-font-feature-settings: 'liga' !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+button .fa {
+  padding-right: 7px;
+}
+#navbarDropdownMenuLink, #navbarDropdownProfile i.fa-user {
+  color: #fff !important
+}
+#navbarDropdownMenuLink {
+text-transform:none !important}
+  .ag-theme-balham .ag-root {
+    border: 0 !important
+  }
+.ag-header-viewport, .ag-floating-top-viewport, .ag-body-viewport, .ag-pinned-left-cols-viewport, .ag-center-cols-viewport, .ag-pinned-right-cols-viewport, .ag-floating-bottom-viewport, .ag-body-horizontal-scroll-viewport, .ag-virtual-list-viewport {
+  background: #dfe6e6;
+}
+.ag-theme-balham .ag-row-odd {
+  background-color: #e9f3f2 !important;
+}
+.ag-theme-balham .ag-header {
+  color: #3e3e3e !important;
+  font-size: 11px !important;
+}
+.ag-theme-balham {
+  font-size: 11px !important;
+  border: 1px solid #bdc3c7;
+}
+.ag-theme-balham .ag-ltr .ag-cell-focus {
+  border: 1px solid #d9dbdc;
+}
+.modalHead {
+ text-align:left !important;
+ color:#fff
+}
+.cross {
+  color: #117168;
+  font-weight: bold;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+.radioStyle {
+  display:inline-block;
+}
+.colWidth14 {
+  width: 14%;
+}
+.radioCon{
+  padding: 12px 5px 0 0;
+}
+.locationCon {
+  padding:0.75rem 1.5rem 1.5rem;
+  background: #f7f5f5;
+  margin: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.locationHead {
+  color: #6d6b6b;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.selectBox .form-control {
+height:36px
+}
+
+.ag-theme-balham .ag-filter-select {
+  padding-left: 4px;
+}
+.ag-theme-balham .ag-row-selected {
+  background-color: #d6e3df !important;
+}
+.roleIcon {
+  padding: 15px 8px;
+}
+
+.dropdown {
+z-index:9;
+}
+  .dropdown:after {
+    position: absolute;
+    content: '';
+    right: 12px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #948c8c;
+  }
+.mailBox {
+  border: 1px solid #2eab85;
+  background: #dff5ee;
+}
+.card .card-body .mailBox .form-group {
+  margin: 0px 0 0;
+  z-index: 10;
+}
+.mailBox .dropdown:after {
+  position: absolute;
+  content: '';
+  right: 9px;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 8px solid #0d9a6f;
+}
+select.selectpicker option:hover {
+  background: #09a777 !important;
+  color: #ffffff !important;
+}
+.form-checkbox {
+  margin-top: 12px;
+}
+.accessrights {
+  border: 1px solid #ddd9d9;
+  border-radius: 5px;
+}
+.rights {
+  line-height: 45px;
+  font-size: 12px;
+  color: #393939
+}
+

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FRD Inventory</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="assets/material-style.css" rel="stylesheet" />
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css" rel="stylesheet" type="text/css" />
+  <link href="../node_modules/ag-grid-community/dist/styles/ag-grid.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
+  <script src="assets/js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".btn1").click(function () {
+        $("#login").css('display', 'none');
+        $("#forgot").css('display', 'block');
+      });
+      $(".btn2").click(function () {
+        $("#login").css('display', 'block');
+        $("#forgot").css('display', 'none');
+      });
+     })
+
+  </script>
+</head>
+<body>
+  <app-root>Loading...</app-root>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap-material-design.min.js"></script>
+  <!--<script type="text/javascript">var bootstrap_material_designs = jQuery.noConflict();</script>-->
+  <script src="assets/js/material-dashboard.js"></script>
+  <!--<script src="assets/js/bootstrap-selectpicker.js"></script>-->
+
+</body>
+</html>

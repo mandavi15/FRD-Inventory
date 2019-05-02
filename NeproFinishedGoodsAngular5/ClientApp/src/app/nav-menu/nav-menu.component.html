@@ -1,0 +1,106 @@
+<!--<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse' [attr.aria-expanded]='isExpanded' (click)='toggle()'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' [routerLink]='["/"]'>NeproFinishedGoodsAngular5</a>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]='["active"]' [routerLinkActiveOptions]='{ exact: true }'>
+                    <a [routerLink]='["/"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-home'></span> Home
+                    </a>
+                </li>
+                <li [routerLinkActive]='["active"]'>
+                    <a [routerLink]='["/counter"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-education'></span> Counter
+                    </a>
+                </li>
+                <li [routerLinkActive]='["active"]'>
+                    <a [routerLink]='["/fetch-data"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>-->
+<div class="sidebar" data-color="rose" data-background-color="black" >
+
+  
+  <div class="sidebar-wrapper"><div class="logo" style="text-align: center;">
+    <a href="#"><img src="../../assets/img/Main-LOGO.png" /></a>
+
+    </div>
+                               <ul class="nav">
+
+                                 <li class="nav-item " [routerLinkActive]='["active"]'>
+                                   <a class="nav-link" [routerLink]='["/user"]' (click)='collapse()'>
+                                     <i class="sidebar-mini">
+                                       <img src="../../assets/img/user_icon.png" />
+                                     </i>
+                                     <p> Admin Privilege </p>
+                                   </a>
+                                 </li>
+
+                                 <li class="nav-item" [routerLinkActive]='["active"]'>
+                                   <a class="nav-link" [routerLink]='["/materialReceivedNote"]' (click)='collapse()'>
+                                     <i class="material-icons">
+                                       <img src="../../assets/img/mrn_icon.png" />
+                                     </i>
+                                     <p>Material Received Note</p>
+                                   </a>
+                                 </li>
+
+                                 <li class="nav-item  " [routerLinkActive]='["active"]'>
+                                   <a class="nav-link" [routerLink]='["/dashboard"]' (click)='collapse()'>
+                                     <i class="material-icons">
+                                       <img src="../../assets/img/dashboard_icon.png" />
+                                     </i>
+                                     <p> Dashboard </p>
+                                   </a>
+                                 </li>
+
+
+                                 <li class="nav-item " [routerLinkActive]='["active"]'>
+                                   <a class="nav-link" [routerLink]='["/itemRequest"]' (click)='collapse()'>
+                                     <i class="material-icons"> <img src="../../assets/img/request_icon.png" /></i>
+                                     <p> Item Request</p>
+                                   </a>
+
+                                 </li>
+
+
+                                 <li class="nav-item " [routerLinkActive]='["active"]'>
+                                   <a class="nav-link" [routerLink]='["/requestControl"]' (click)='collapse()'>
+                                     <i class="sidebar-mini">
+                                       <img src="../../assets/img/request_control_icon.png" />
+                                     </i>
+                                     <p> Request Control </p>
+                                   </a>
+                                 </li>
+                                 <!--<li class="nav-item " [routerLinkActive]='["active"]'>
+                                   <a class="nav-link" [routerLink]='["/requestControlDetails"]' (click)='collapse()'>
+                                     <i class="sidebar-mini">
+                                       <img src="../../assets/img/request_control_icon.png" />
+                                     </i>
+                                     <p> Request Control Details</p>
+                                   </a>
+                                 </li>-->
+                                 <li class="nav-item " [routerLinkActive]='["active"]'>
+                                   <a class="nav-link" [routerLink]='["/transferOrder"]' (click)='collapse()'>
+                                     <i class="sidebar-mini">
+                                       <img src="../../assets/img/transfer_icon.png" />
+                                     </i>
+                                     <p> Transfer Order Detail</p>
+                                   </a>
+                                 </li>
+                               </ul>
+  </div>
+</div>

@@ -1,0 +1,266 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="card-body pull-right p-1">
+      <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#resetPass"><i class="fa fa-unlock-alt" aria-hidden="true"></i>Reset Password</button>
+      <button class="btn btn-success btn-sm" (click)="showhide()"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
+      <button class="btn btn-success btn-sm" (click)="save()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Submit</button>
+      <!--<button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>-->
+      <button class="btn btn-success btn-sm" (click)="showhide2()"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
+    </div>
+    <div class="clearfix"></div>
+
+  </div>
+</div>
+<div class="content">
+  <div class="content">
+    <div class="container-fluid">
+
+      <div class="clearfix"></div>
+      <!--<form class="form-horizontal" [formGroup]="userForm">-->
+
+        <div class="row" *ngIf="show">
+
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header card-header-rose card-header-text">
+                <div class="card-text">
+                  <h4 class="card-title">User Form</h4>
+                </div>
+              </div>
+              <div class="card-body mt-3">
+                <form  class="form-horizontal"  [formGroup]="userForm">
+                <div class="container">
+                  <div class="row mb-2">
+                    <div class="col-md-6">
+
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">User Name</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="" [(ngModel)]="username" formControlName='username' id="username" [ngClass]="{'is-invalid': submitted && f.username.errors}">
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                              <div *ngIf="f.username.errors.required">* Username is required</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-2  col-md-4 col-form-label">E-mail</label>
+                        <div class="col-sm-9 col-md-8">
+                          <div class="form-group">
+
+                            <input type="text" class="form-control" formControlName="emailid" [ngClass]="{'is-invalid': submitted && f.emailid.errors}">
+                            <div *ngIf="submitted && f.emailid.errors" class="invalid-feedback">
+                              <div *ngIf="f.emailid.errors.required">* Email Id is required</div>
+                              <div *ngIf="f.emailid.errors.email">* Email Id must be at least 6 characters</div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Password</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted && f.password.errors}">
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                              <div *ngIf="f.password.errors.required">* Password is required</div>
+                              <div *ngIf="f.password.errors.minlength">* Password must be at least 6 characters</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Confirm Password</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control" formControlName="cpassword" [ngClass]="{'is-invalid': submitted && f.cpassword.errors}">
+                            <div *ngIf="submitted && f.cpassword.errors" class="invalid-feedback">
+                              <div *ngIf="f.cpassword.errors.required">* Confirm Password is required</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">User Pin</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control" formControlName="userpin" [ngClass]="{'is-invalid': submitted && f.userpin.errors}">
+                            <div *ngIf="submitted && f.userpin.errors" class="invalid-feedback">
+                              <div *ngIf="f.userpin.errors.required">* User Pin is required</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Warehouse:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="dropdown">
+                            <div class="form-group">
+                              <div class="form-control">
+                                <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                                  <option> Select</option>
+                                  <option value="2">Warehouse 1</option>
+                                  <option value="3">Warehouse 2</option>
+                                  <option value="4">Warehouse 3</option>
+
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="container accessrights mt-2">
+                      <div class="row ">
+                        <div class="col-md-6">
+                          <div class="rights">Select Access Rights</div>
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="row">
+                            <label class="col-sm-6  col-md-3 col-form-label">Controller</label>
+                            <div class="col-sm-6 col-md-3">
+                              <div class="form-group">
+                                <input type="checkbox" class="form-checkbox" formControlName="InventoryController" [ngClass]="{'is-invalid': submitted && f.InventoryController.errors}">
+                                <div *ngIf="submitted && f.InventoryController.errors" class="invalid-feedback">
+                                  <div *ngIf="f.InventoryController.errors.required">* Controller is required</div>
+                                </div>
+                              </div>
+                            </div>
+                            <label class="col-sm-6 col-md-3 col-form-label">Store Picker</label>
+                            <div class="col-sm-6 col-md-3">
+                              <div class="form-group">
+                                <input type="checkbox" class="form-checkbox" formControlName="StorePicker" [ngClass]="{'is-invalid': submitted && f.StorePicker.errors}">
+                                <!--<div *ngIf="submitted && f.StorePicker.errors" class="invalid-feedback">
+                <div *ngIf="f.StorePicker.errors.required">* Store Picker is required</div>
+              </div>-->
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <!--</form>
+      <div class="row  mb-5" *ngIf="hide">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-text">
+                <h4 class="card-title">All Users</h4>
+              </div>
+              <h4 class="card-title"></h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+
+                <ag-grid-angular style="width:100%; height: 560px" class="ag-theme-balham" [rowData]="rowData1"
+                                 [columnDefs]="columnDefs1" [animateRows]="true"
+                                 (gridReady)="onAddressGridReady($event)"  [gridOptions]="gridOptions">
+                  
+                </ag-grid-angular>
+
+          
+      </form>-->
+
+      <div class="row  mb-5" *ngIf="hide">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-text">
+                <h4 class="card-title">All Users</h4>
+              </div>
+              <h4 class="card-title"></h4>
+            </div>
+            <div class="card-body mt-1">
+              <div class="table-responsive">
+
+                <ag-grid-angular style="width:100%; height: auto"
+                                 class="ag-theme-balham"
+                                 [rowData]="rowData1"
+                                 [columnDefs]="columnDefs1"></ag-grid-angular>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+
+<div class="modal fade" id="resetPass" role="dialog">
+  <div class="modal-dialog ">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span class="cross">&times;</span></button>
+        <h4 class="modal-title modalHead">Reset Password</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Enter Current Password" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="New Password" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Confirm Password" />
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm mr-2" data-dismiss="modal">Submit</button>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
