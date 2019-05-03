@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { ResetPasswordComponent } from './resetPassword/resetPassword.component';
 import { RequestControlComponent } from './request-control/request-control.component';
 import { ItemRequestComponent } from './item-request/item-request.component'; 
 import { RequestControlDetailsComponent } from './request-control-details/request-control-details.component';
@@ -38,6 +39,7 @@ import { HttpModule } from '@angular/http';
     RequestControlDetailsComponent,
     TransferOrderComponent,
     LoginComponent,
+    ResetPasswordComponent,
     DummyComponent,
     MaterialReceivedNoteComponent,
     UserComponent
@@ -56,6 +58,7 @@ import { HttpModule } from '@angular/http';
       { path: 'materialReceivedNote', component: MaterialReceivedNoteComponent },
       { path: 'dummy', component: DummyComponent },  
       { path: 'login', component: LoginComponent },
+      { path: 'resetPassword', component: ResetPasswordComponent },
       { path: 'user', component: UserComponent },
      ])
   ],
