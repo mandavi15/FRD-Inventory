@@ -26,6 +26,7 @@ import { UserAccount } from './Services/AccountService';
 import { HttpModule } from '@angular/http';
 import { AuthGuard } from './auth.guard';
 
+
 @NgModule({
   declarations: [
     AppComponent,
