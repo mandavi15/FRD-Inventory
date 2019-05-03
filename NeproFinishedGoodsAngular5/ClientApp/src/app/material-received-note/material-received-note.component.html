@@ -20,57 +20,136 @@
                 <h4 class="card-title">Material Received Note</h4>
               </div>
             </div>
-            <div class="card-body mt-2">
+            <div class="card-body mt-2" *ngIf="hide">
+
+              <div class="table-responsive mt-2">
+
+                <ag-grid-angular style="width:100%; height: auto"
+                                 class="ag-theme-balham"
+                                 [rowData]="rowData3"
+                                 [columnDefs]="columnDefs3"></ag-grid-angular>
+
+                <div class="col-md-12 mt-2 clearfix p-0">
+                  <button class="btn pull-right btn-success btn-sm" (click)="showhide()">Create MRN</button>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body mt-2" *ngIf="show">
               <form method="get" class="form-horizontal">
                 <div class="container">
                   <div class="row mb-2">
-                    <div class="col-md-6">
-
+                    <div class="col-md-4">
                       <div class="row">
-                        <label class="col-sm-3 col-md-4 col-form-label">Vendor:</label>
+                        <label class="col-sm-3 col-md-4 col-form-label">Created By:</label>
                         <div class="col-sm-8 col-md-8">
-                          <div class="dropdown">
-                            <div class="form-group">
-                              <div class="form-control">
-                                <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
-                                  <option> Select</option>
-                                  <option value="2">Vendor 1</option>
-                                  <option value="3">Vendor 2</option>
-                                  <option value="4">Vendor 3</option>
+                          <div class="form-group">
+                            <label class="pt-2">Fateh</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">MRN Number:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">MRN Date:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">PO Number:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Activity Number:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="row">
+                        <label class="col-sm-3 col-md-4 col-form-label">Activity Date:</label>
+                        <div class="col-sm-8 col-md-8">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12" style=" background: #e9f3f2; border: 1px solid #d3d6d6; padding: 5px !important;
+    border-radius: 4px; margin-top: 8px;">
+                      <div class="col-md-4 pull-left">
 
-                                </select>
+                        <div class="row">
+                          <label class="col-sm-3 col-md-4 col-form-label">Vendor:</label>
+                          <div class="col-sm-8 col-md-8">
+                            <div class="dropdown">
+                              <div class="form-group">
+                                <div class="form-control">
+                                  <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                                    <option> Select</option>
+                                    <option value="2">Vendor 1</option>
+                                    <option value="3">Vendor 2</option>
+                                    <option value="4">Vendor 3</option>
+
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 pull-left">
+
+                        <div class="row">
+                          <label class="col-sm-3 col-md-4 col-form-label">Purchased Order:</label>
+                          <div class="col-sm-8 col-md-8">
+                            <div class="dropdown">
+                              <div class="form-group">
+                                <div class="form-control">
+                                  <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                                    <option> Select</option>
+                                    <option value="2">PO 1</option>
+                                    <option value="3">PO 2</option>
+                                    <option value="4">PO 3</option>
+
+                                  </select>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-
-                      <div class="row">
-                        <label class="col-sm-3 col-md-4 col-form-label">Purchased Order:</label>
-                        <div class="col-sm-8 col-md-8">
-                          <div class="dropdown">
-                            <div class="form-group">
-                              <div class="form-control">
-                                <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
-                                  <option> Select</option>
-                                  <option value="2">PO 1</option>
-                                  <option value="3">PO 2</option>
-                                  <option value="4">PO 3</option>
-
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
                 </div>
 
               </form>
+              <h6 class="mrnHead">Purchase Order Information</h6>
               <div class="table-responsive">
 
                 <ag-grid-angular style="width:100%; height: auto"
@@ -86,9 +165,9 @@
                                  [rowData]="rowData1"
                                  [columnDefs]="columnDefs1"></ag-grid-angular>
 
-                <div class="col-md-12 mt-2 clearfix p-0">
-    <button class="btn pull-right btn-success btn-sm" data-toggle="modal" data-target="#myModal1">Create Batch</button>
-  </div>
+                <!--<div class="col-md-12 mt-2 clearfix p-0">
+                  <button class="btn pull-right btn-success btn-sm" data-toggle="modal" data-target="#myModal1">Create Batch</button>
+                </div>-->
 
               </div>
               <div class="table-responsive mt-2">

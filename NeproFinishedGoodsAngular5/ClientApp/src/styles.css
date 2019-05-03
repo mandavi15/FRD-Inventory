@@ -153,3 +153,8 @@ select.selectpicker option:hover {
   color: #393939
 }
 
+.mrnHead {
+  font-size: 13px !important;
+  color: #26887f;
+  font-weight: 600;
+}
