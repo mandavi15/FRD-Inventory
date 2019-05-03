@@ -17,8 +17,6 @@
   margin-top: 20px;
 }
 
-
-
 .icons {
   border: 1px solid #09a777;
   color: #ffffff;
@@ -26,8 +24,6 @@
   padding: 9px;
   border-radius: 5px;
 }
-
-
 
 @media (min-width: 992px) {
   #myModal1 .modal-lg {
@@ -124,6 +120,8 @@ h2, h3 {
 .table-bordered td, .table-bordered th {
 	border: 1px solid #ddd!important
 }
+
+
 }
 *, :after, :before {
 	box-sizing: border-box
@@ -8706,7 +8704,7 @@ select, select.form-control {
 	opacity: 1
 }
 .form-group {
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	position: relative;
 	margin: 8px 0 0
 }

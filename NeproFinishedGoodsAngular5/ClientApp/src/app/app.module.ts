@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { ResetPasswordComponent } from './resetPassword/resetPassword.component';
 import { RequestControlComponent } from './request-control/request-control.component';
 import { ItemRequestComponent } from './item-request/item-request.component'; 
 import { RequestControlDetailsComponent } from './request-control-details/request-control-details.component';
@@ -40,6 +41,7 @@ import { AuthGuard } from './auth.guard';
     RequestControlDetailsComponent,
     TransferOrderComponent,
     LoginComponent,
+    ResetPasswordComponent,
     DummyComponent,
     MaterialReceivedNoteComponent,
     UserComponent
@@ -58,7 +60,12 @@ import { AuthGuard } from './auth.guard';
       { path: 'materialReceivedNote', canActivate: [AuthGuard],component: MaterialReceivedNoteComponent },
       { path: 'dummy', component: DummyComponent },  
       { path: 'login', component: LoginComponent },
+
       { path: 'user', canActivate: [AuthGuard], component: UserComponent },
+
+      { path: 'resetPassword', component: ResetPasswordComponent },
+      { path: 'user', component: UserComponent },
+
      ])
   ],
   providers: [UserAccount, AuthGuard],
