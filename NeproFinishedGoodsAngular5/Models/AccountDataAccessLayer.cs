@@ -67,7 +67,7 @@ namespace FRDInventory.Models
             }
         }
 
-        public List<TblUserLogin> LoginUser(TblUserLogin user)
+        public List<UserLogin> LoginUser(UserLogin user)
         {
             try
             {
@@ -76,7 +76,7 @@ namespace FRDInventory.Models
                 string getPass = string.Empty;
                 string getEmail = string.Empty;
                
-               List<TblUserLogin> list =   db.TblUserLogin.FromSql(@"SP_Login @QueryType,@Emailid",
+               List<UserLogin> list =   db.UserLogin.FromSql(@"SP_Login @QueryType,@Emailid",
                     new SqlParameter("@QueryType", "UserAccess"),
                     new SqlParameter("@Emailid", user.EmailId)
                     ).ToList();
@@ -88,6 +88,31 @@ namespace FRDInventory.Models
                 throw;
             }
         }
+
+        public string FrgtPassword(FrgtPassword user)
+        {
+            string getEmail = string.Empty;
+            try
+            {
+                List<FrgtPassword> list = db.FrgtPassword.FromSql(@"SP_Login @QueryType,@Emailid",
+                     new SqlParameter("@QueryType", "ForgotPassword"),
+                     new SqlParameter("@Emailid", user.EmailId)
+                     ).ToList();
+
+                foreach (var value in list)
+                {
+                  
+                    getEmail = value.EmailId;
+
+                }
+                return getEmail;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         public List<GetUserData> BindGrid()
         {
             try            {
@@ -103,6 +128,91 @@ namespace FRDInventory.Models
                 throw;
             }
                     }
+
+        public int DeleteUser(int userId)
+        {
+            try
+            {
+                db.Database.ExecuteSqlCommand(@"Sp_DeviceUser @QueryType,@UserName,@EmailId,@Password,@PasswordKey, @UserPin,@StorePicker,@Controller,@UserId",
+                            new SqlParameter("@QueryType", "DeleteUser"),
+                            new SqlParameter("@Password", ""),
+                             new SqlParameter("@PasswordKey", ""),
+                             new SqlParameter("@EmailId", ""),
+                             new SqlParameter("@UserPin", ""),
+                            new SqlParameter("@Controller", ""),
+                            new SqlParameter("@UserName", ""),
+                            new SqlParameter("@StorePicker", ""),
+                             new SqlParameter("@UserId", userId));
+                return 1;
+            }
+            catch(Exception e)
+            {
+                throw;
+            }
+          
+        }
+
+
+        public string ChangePassword(UserLogin user)
+        {
+            try
+            {
+                string[] Arr = user.Password.Split("_");
+                string getPass = string.Empty;
+                string getEmail = string.Empty;
+
+                List<UserLogin> list = db.UserLogin.FromSql(@"SP_Login @QueryType,@Emailid",
+                    new SqlParameter("@QueryType", "getPassword"),
+                    new SqlParameter("@Emailid", user.EmailId)
+                    ).ToList();
+
+                if (list.Count > 0)
+                {
+                    foreach (var value in list)
+                    {
+                        getPass = DbSecurity.Decrypt(value.Password, value.PasswordKey);
+                        getEmail = value.EmailId;
+
+                    }
+
+                    if (getPass == Arr[1])
+                    {
+                        string pass = string.Empty;
+                        string pwdKey = string.Empty;
+                        if (Arr[0].Trim() != "")
+                        {
+
+                            pass = DbSecurity.Encrypt(Arr[0], ref pwdKey);
+                        }
+
+                        db.Database.ExecuteSqlCommand(@"SP_Login @QueryType,@EmailId,@Password,@PasswordKey",
+                           new SqlParameter("@QueryType", "UpdatePassword"),
+                           new SqlParameter("@EmailId", getEmail),
+                        new SqlParameter("@Password", pass),
+                            new SqlParameter("@PasswordKey", pwdKey));
+
+                            string status = "success";
+                            return status;
+                    }
+                    else
+                    {
+
+                        string status = "Current password is not valid";
+                        return status;
+                    }
+                }
+                else
+                {
+                    string status = "Please Login";
+                    return status;
+
+                }
+
+            }
+            catch(Exception e) {
+                throw;
+            }
+        }
 
     }
     

@@ -17,25 +17,19 @@ namespace FRDInventory.Controllers
         [Route("api/controller/CreateUser")]
         public int CreateUser([FromBody]TblUserLogin user)
         {
-           
-
            return  dbAccess.AddUser(user);
-
-
-           
-
-        }
+ }
 
         [HttpPost]
         [Route("api/controller/Login")]
-        public string LoginUser([FromBody]TblUserLogin user)
+        public string LoginUser([FromBody]UserLogin user)
 
 
         {
             string getPass = string.Empty;
             string getEmail = string.Empty;
             
-            List<TblUserLogin> list = dbAccess.LoginUser(user);
+            List<UserLogin> list = dbAccess.LoginUser(user);
             if (list.Count > 0)
             {
                 foreach (var value in list)
@@ -85,5 +79,29 @@ namespace FRDInventory.Controllers
 
         }
 
+        [HttpGet]
+        [Route("api/controller/DeleteUser/{userId}")]
+        public int CreateUser(int userId)
+        {
+            return dbAccess.DeleteUser(userId);
+        }
+
+        [HttpPost]
+        [Route("api/controller/FrgtPassword")]
+        public string FrgtPassword([FromBody]FrgtPassword email)
+        {
+      
+            return dbAccess.FrgtPassword(email);
+
+        }
+
+        [HttpPost]
+        [Route("api/controller/ChangePassword")]
+        public string ChangePassword([FromBody] UserLogin user)
+        {
+
+            return dbAccess.ChangePassword(user);
+
+        }
     }
 }

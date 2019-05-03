@@ -7,9 +7,9 @@ import { fail } from 'assert';
 import { Http } from '@angular/http';
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styleUrls: ['./login.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
 /** Login component*/
 export class LoginComponent implements OnInit {
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
       EmailId: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
-   
+
     });
   }
 
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
 
 
   LoginUser() {
-    
+
     if (!this.userForm.valid) {
       return;
     }
@@ -48,38 +48,40 @@ export class LoginComponent implements OnInit {
 
     this.http.post(this.myAppUrl + 'api/controller/Login', this.userForm.value)
       .subscribe(data => {
-      
+
         if (data['_body'] == "success") {
+
+
+          sessionStorage.setItem('username', this.userForm.controls['EmailId'].value);
           this._router.navigate(['/itemRequest']);
-         
-          
+
+
         }
         else {
 
           alert(data['_body']);
-        }    
-    }, error => this.errorHandler = error)
+        }
+      }, error => this.errorHandler = error)
 
-    
-     
-    
-    
+
+
+
+
   }
 
 
   errorHandler(error: Response) {
     console.log(error);
     return Observable.throw(error);
-  }  
+  }
 
 
 
 }
 
-export class GetLogin
- {
+export class GetLogin {
   _body: any
-  
+
   // emailId: string
 
 

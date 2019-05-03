@@ -8,10 +8,12 @@ namespace FRDInventory.Models
 {
     public class GetUserData
     {
-        public string UserName { get; set; }
-       
-        public string EmailId { get; set; }
         [Key]
+        public long UserID { get; set; }
+        public string UserName { get; set; }
+        
+        public string EmailId { get; set; }
+        
         public long UserPin { get; set; }
         public string InventoryController { get; set; }
         public string StorePicker { get; set; }
