@@ -25,6 +25,8 @@ import { DummyComponent } from './dummy/dummy.component';
 import { UserComponent } from './user/user.component';
 import { UserAccount } from './Services/AccountService';
 import { HttpModule } from '@angular/http';
+import { AuthGuard } from './auth.guard';
+
 
 @NgModule({
   declarations: [
@@ -50,19 +52,23 @@ import { HttpModule } from '@angular/http';
     FormsModule, ReactiveFormsModule, BrowserAnimationsModule, TreeViewModule,
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
-      { path: 'itemRequest', component: ItemRequestComponent },
-      { path: 'requestControl', component: RequestControlComponent }, 
-      { path: 'requestControlDetails', component: RequestControlDetailsComponent },
-      { path: 'transferOrder', component: TransferOrderComponent },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'materialReceivedNote', component: MaterialReceivedNoteComponent },
+      { path: 'itemRequest', canActivate: [AuthGuard], component: ItemRequestComponent },
+      { path: 'requestControl', canActivate: [AuthGuard], component: RequestControlComponent }, 
+      { path: 'requestControlDetails', canActivate: [AuthGuard], component: RequestControlDetailsComponent },
+      { path: 'transferOrder', canActivate: [AuthGuard], component: TransferOrderComponent },
+      { path: 'dashboard', canActivate: [AuthGuard], component: DashboardComponent },
+      { path: 'materialReceivedNote', canActivate: [AuthGuard],component: MaterialReceivedNoteComponent },
       { path: 'dummy', component: DummyComponent },  
       { path: 'login', component: LoginComponent },
+
+      { path: 'user', canActivate: [AuthGuard], component: UserComponent },
+
       { path: 'resetPassword', component: ResetPasswordComponent },
       { path: 'user', component: UserComponent },
+
      ])
   ],
-  providers: [UserAccount],
+  providers: [UserAccount, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
