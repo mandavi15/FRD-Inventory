@@ -133,7 +133,7 @@ export class UserComponent implements OnInit{
     { headerName: 'E-mail', field: 'emailId', sortable: true, filter: true, width: 190 },  
     { headerName: 'User Pin', field: 'userPin', sortable: true, filter: true, width: 100},
     { headerName: 'Status', field: 'status', sortable: true, filter: true, width: 100 },
-    { headerName: '', field: '', width: 500 }
+    { headerName: '', field: '', width: 470 }
  ];
 
   rowData1 = [];

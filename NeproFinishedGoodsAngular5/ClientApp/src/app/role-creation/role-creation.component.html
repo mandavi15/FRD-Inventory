@@ -1,0 +1,79 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="card-body pull-right p-1">
+         <button class="btn btn-success btn-sm" (click)="showhide()"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
+      <!--<button class="btn btn-success btn-sm" (click)="showhide2()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Submit</button>
+
+      <button class="btn btn-success btn-sm" (click)="showhide2()"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>-->
+    </div>
+    <div class="clearfix"></div>
+
+  </div>
+</div>
+<div class="content">
+  <div class="content">
+    <div class="container-fluid">
+
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card ">
+            <div class="card-header card-header-rose card-header-text">
+              <div class="card-text">
+                <h4 class="card-title">Role Creation</h4>
+              </div>
+            </div>
+            <div class="card-body mt-2">
+              <form method="get" class="form-horizontal">
+                <div class="container">
+                  <div class="row mb-2">
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-2 col-md-2 col-form-label">Role</label>
+                        <div class="col-sm-7 col-md-7">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div class="col-md-6">
+                      <div class="row">
+                        <label class="col-sm-2 col-md-2 col-form-label">Description</label>
+                        <div class="col-sm-7 col-md-7">
+                          <div class="form-group">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                
+
+                    <!--<div class="col-md-12 ">
+                      <button class="btn pull-right btn-success btn-sm"><i aria-hidden="true" class="fa fa-plus"></i>Add</button>
+                    </div>-->
+                  </div>
+                </div>
+
+              </form>
+              <div class="table-responsive">
+
+                <ag-grid-angular style="width:100%; height: auto"
+                                 class="ag-theme-balham"
+                                 [rowData]="rowData"
+                                 [columnDefs]="columnDefs"></ag-grid-angular>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+

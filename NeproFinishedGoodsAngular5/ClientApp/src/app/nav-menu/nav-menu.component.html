@@ -40,13 +40,37 @@
     </div>
                                <ul class="nav">
 
-                                 <li class="nav-item " [routerLinkActive]='["active"]'>
-                                   <a class="nav-link" [routerLink]='["/user"]' (click)='collapse()'>
+                                 <li class="nav-item " >
+                                   <a class="nav-link" data-toggle="collapse" href="#userRole">
                                      <i class="sidebar-mini">
                                        <img src="../../assets/img/user_icon.png" />
                                      </i>
                                      <p> Admin Privilege </p>
+                                     <b class="caret"></b>
                                    </a>
+                                   <div class="collapse" id="userRole">
+                                     <ul class="nav">
+                                       <li class="nav-item" [routerLinkActive]='["active"]'>
+                                         <a class="nav-link" [routerLink]='["/user"]' (click)='collapse()'>
+                                           <i class="sidebar-mini"> <img src="../../assets/img/user_icon.png" /> </i>
+                                           <p class="sidebar-normal"> User List</p>
+                                         </a>
+                                       </li>
+                                       <li class="nav-item" [routerLinkActive]='["active"]'>
+                                         <a class="nav-link" [routerLink]='["/roleMaster"]' (click)='collapse()'>
+                                           <i class="sidebar-mini"> <img src="../../assets/img/role_icon.png" /> </i>
+                                           <p class="sidebar-normal"> Role Master</p>
+                                         </a>
+                                       </li>
+
+                                       <li class="nav-item" [routerLinkActive]='["active"]'>
+                                         <a class="nav-link" [routerLink]='["/roleCreation"]' (click)='collapse()'>
+                                           <i class="sidebar-mini"> <img src="../../assets/img/roleAssignment_icon.png" /> </i>
+                                           <p class="sidebar-normal">Role Creation </p>
+                                         </a>
+                                       </li>
+                                     </ul>
+                                   </div>
                                  </li>
 
                                  <li class="nav-item" [routerLinkActive]='["active"]'>

@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
       .subscribe(data => {
       
         if (data['_body'] == "success") {
-          this._router.navigate(['/itemRequest']);
+          this._router.navigate(['/user']);
          
           
         }

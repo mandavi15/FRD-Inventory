@@ -17,7 +17,9 @@ import { ResetPasswordComponent } from './resetPassword/resetPassword.component'
 import { RequestControlComponent } from './request-control/request-control.component';
 import { ItemRequestComponent } from './item-request/item-request.component'; 
 import { RequestControlDetailsComponent } from './request-control-details/request-control-details.component';
-import { TransferOrderComponent } from './transfer-order/transfer-order.component';
+import { TransferOrderComponent } from './transfer-order/transfer-order.component'; 
+import { RoleMasterComponent } from './role-master/role-master.component';
+import { RoleCreationComponent } from './role-creation/role-creation.component';
 import { MaterialReceivedNoteComponent } from './material-received-note/material-received-note.component'; 
 import { DummyComponent } from './dummy/dummy.component';
 import { UserComponent } from './user/user.component';
@@ -36,6 +38,8 @@ import { HttpModule } from '@angular/http';
     ItemRequestComponent,
     RequestControlDetailsComponent,
     TransferOrderComponent,
+    RoleMasterComponent,
+    RoleCreationComponent,
     LoginComponent,
     ResetPasswordComponent,
     DummyComponent,
@@ -53,7 +57,9 @@ import { HttpModule } from '@angular/http';
       { path: 'requestControlDetails', component: RequestControlDetailsComponent },
       { path: 'transferOrder', component: TransferOrderComponent },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'materialReceivedNote', component: MaterialReceivedNoteComponent },
+      { path: 'materialReceivedNote', component: MaterialReceivedNoteComponent }, 
+      { path: 'roleMaster', component: RoleMasterComponent },
+      { path: 'roleCreation', component: RoleCreationComponent },
       { path: 'dummy', component: DummyComponent },  
       { path: 'login', component: LoginComponent },
       { path: 'resetPassword', component: ResetPasswordComponent },

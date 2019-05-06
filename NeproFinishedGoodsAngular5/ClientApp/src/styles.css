@@ -201,3 +201,64 @@ a.mrnHead {
 .form-group {
    margin-top: 0px !important
 }
+
+#rolesList ul.list-group {
+  display: inline-block !important;
+  width: 100%;
+  padding-top: 25px;
+}
+
+#rolesList ul li {
+  display: inline-block !important;
+}
+
+  #rolesList ul li.list-item {
+    color: #3e3e3e;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 4px;
+    width: 32.3%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+  }
+
+    #rolesList ul li.list-item .rolesList {
+      border-bottom: 1px solid #AAC7D0 !important;
+      padding-bottom: 8px;
+      padding-left: 8px;
+    }
+
+    #rolesList ul li.list-item i {
+      font-weight: bold;
+      padding-right: 6px;
+    }
+
+.rolesList i {
+  width: 11%
+}
+
+.rolesList label {
+  width: 85%;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+.ag-theme-balham .ag-header-cell-label .ag-header-cell-text {
+  font-weight: bold;
+}
+.selectedItem {
+  background: #b1cecb !important;
+  margin: 0;
+  padding-top: 5px !important;
+  padding-bottom: 0 !important;
+}
+#resetPass .modal-dialog .modal-body {
+  padding: 15px;
+}
+#userRole {
+  padding-left: 30px;
+}
+.sidebar .nav .caret {
+  margin-top: -8px !important;
+  position: absolute !important;
+  right: 28px !important;
+}
