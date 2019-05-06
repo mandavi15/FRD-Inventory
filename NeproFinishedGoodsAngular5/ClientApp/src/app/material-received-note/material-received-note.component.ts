@@ -21,13 +21,14 @@ export class MaterialReceivedNoteComponent {
     this.hide = true;
     //alert(this.hide);
   }
+ 
 
   columnDefs = [
     { headerName: 'Vendor Code', field: 'vendorCode', sortable: true, filter: true, width: 110 },
     { headerName: 'Vendor Name', field: 'vendorname', sortable: true, filter: true, width: 110 },
     { headerName: 'PO Number', field: 'PON', sortable: true, filter: true, width: 125 },
     { headerName: 'Status', field: 'status', sortable: true, filter: true, width: 100 },
-    { headerName: ' ', field: ' ', width: 490 }
+    { headerName: ' ', field: ' ', width: 580}
   ];
 
   rowData = [
@@ -47,10 +48,16 @@ export class MaterialReceivedNoteComponent {
     { headerName: 'Unit', field: 'unit', sortable: true, filter: true, width: 70 },
     { headerName: 'Received Qty', field: 'receivedQty', sortable: true, filter: true, width: 110 },
     { headerName: 'Created Batch Qty', field: 'batchQty', sortable: true, filter: true, width: 140 },
-    { headerName: '', field: '', template: `<button class="btn pull-right btn-success btn-sm">Create Batch</button>`, width: 100 }
+    { headerName: '', field: '', template: `<button class="btn pull-right btn-success btn-sm" data-toggle="modal" data-target="#batchPopup">Create Batch</button>`, width: 100 },
+    { headerName: '', field: '', sortable: true, filter: true, width: 80 }
   ];
 
   rowData1 = [
+    { itemno: '1', productname: 'Rice', productnameArabic: 'qqqqq', configuration: 'Config 1', remQty: '100', unit: 'kg', receivedQty: '50', batchQty: '30' },
+    { itemno: '2', productname: 'Rice', productnameArabic: 'qqqqq', configuration: 'Config 1', remQty: '100', unit: 'kg', receivedQty: '50', batchQty: '30' },
+    { itemno: '3', productname: 'Rice', productnameArabic: 'qqqqq', configuration: 'Config 1', remQty: '100', unit: 'kg', receivedQty: '50', batchQty: '30' },
+    { itemno: '4', productname: 'Rice', productnameArabic: 'qqqqq', configuration: 'Config 1', remQty: '100', unit: 'kg', receivedQty: '50', batchQty: '30' },
+    { itemno: '5', productname: 'Rice', productnameArabic: 'qqqqq', configuration: 'Config 1', remQty: '100', unit: 'kg', receivedQty: '50', batchQty: '30' },
     { itemno: '1', productname: 'Rice', productnameArabic: 'qqqqq', configuration: 'Config 1', remQty: '100', unit: 'kg', receivedQty: '50', batchQty: '30' },
     { itemno: '2', productname: 'Rice', productnameArabic: 'qqqqq', configuration: 'Config 1', remQty: '100', unit: 'kg', receivedQty: '50', batchQty: '30' },
     { itemno: '3', productname: 'Rice', productnameArabic: 'qqqqq', configuration: 'Config 1', remQty: '100', unit: 'kg', receivedQty: '50', batchQty: '30' },
@@ -64,6 +71,7 @@ export class MaterialReceivedNoteComponent {
     { headerName: 'Batch No.', field: 'batchNo', sortable: true, filter: true, width: 110 },
     { headerName: 'Expiry Date', field: 'expiryDate', sortable: true, filter: true, width: 125 },
     { headerName: 'Quantity', field: 'qty', sortable: true, filter: true, width: 100 },
+    { headerName: '', field: '', template: `<button class="btn pull-right btn-success btn-sm" data-toggle="modal" data-target="#generatePopup">Generate Sticker</button>`, width: 120 },
     { headerName: ' ', field: ' ', width: 490 }
   ];
 
@@ -84,7 +92,7 @@ export class MaterialReceivedNoteComponent {
    { headerName: 'MRN Date', field: 'MRNDate', sortable: true, filter: true, width: 120 },
    { headerName: 'Activity Date', field: 'activityDate', sortable: true, filter: true, width: 130 },
    { headerName: 'Received Qty', field: 'receivedQty', sortable: true, filter: true, width: 130 },
-   { headerName: '', field: '', width: 110 }
+   { headerName: '', field: '', width: 200 }
   
   ];
 

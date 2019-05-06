@@ -1,5 +1,3 @@
-/// <reference path="auth.guard.ts" />
-/// <reference path="auth.guard.ts" />
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';

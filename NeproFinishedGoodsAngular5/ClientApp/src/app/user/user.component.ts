@@ -132,13 +132,27 @@ export class UserComponent implements OnInit{
     { headerName: 'User Name', field: 'userName', sortable: true, filter: true, width: 150 },
     { headerName: 'E-mail', field: 'emailId', sortable: true, filter: true, width: 190 },  
     { headerName: 'User Pin', field: 'userPin', sortable: true, filter: true, width: 100},
-    { headerName: 'Controller', field: 'inventoryController', sortable: true, filter: true, width: 90 },
-    { headerName: 'Store Picker', field: 'storePicker', sortable: true, filter: true, width: 110 },
     { headerName: 'Status', field: 'status', sortable: true, filter: true, width: 100 },
-    { headerName: '', field: '', width: 215 }
+    { headerName: '', field: '', width: 500 }
  ];
 
   rowData1 = [];
+
+  columnDefs = [
+    { headerName: 'Role', field: 'role', sortable: true, filter: true, width: 210 },
+    { headerName: 'Role Name', field: 'rolename', sortable: true, filter: true, width: 150 },
+    { headerName: ' ', field: ' ', width: 690 }
+  ];
+
+  rowData = [
+    { role: 'Material Receipt Note', rolename: 'Role Name 1' },
+    { role: 'Batch', rolename: 'Role Name 2' },
+    { role: 'Material Required', rolename: 'Role Name 3' },
+    { role: 'Received Material Required', rolename: 'Role Name 4' },
+    { role: 'Transfer Material Required', rolename: 'Role Name 5' },
+    { role: 'Consumption Inventory Counting', rolename: 'Role Name 6' },
+    { role: 'Wastage', rolename: 'Role Name 7' }
+  ];
  }
 
 

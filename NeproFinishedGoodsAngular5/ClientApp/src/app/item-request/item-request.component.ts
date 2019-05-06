@@ -22,15 +22,15 @@ export class ItemRequestComponent {
     //alert(this.hide);
   }
   columnDefs = [
-    { headerName: 'Item No.', field: 'itemno', sortable: true, filter: true, width: 90 },
-    { headerName: 'Item Name', field: 'productname', sortable: true, filter: true, width: 100 },
-    { headerName: 'Item Name(A)', field: 'productnameArabic', sortable: true, filter: true, width: 125 },
-    { headerName: 'Warehouse', field: 'toWarehouse', sortable: true, filter: true, width: 100 },
-    { headerName: 'Unit', field: 'unit', sortable: true, filter: true, width: 70 },
-    { headerName: 'Availability in req. W/H', field: 'availability', sortable: true, filter: true, width: 155 },
-    { headerName: 'Availability in Branch', field: 'availabilityBranch', sortable: true, filter: true, width: 145 },
-    { headerName: 'Requested Qty', field: 'requestedQty', sortable: true, filter: true, width: 125 },
-    { headerName: 'Reason', field: 'reason', sortable: true, filter: true, width: 90 }
+    { headerName: 'Item No.', field: 'itemno', sortable: true, filter: true, editable: true, width: 90 },
+    { headerName: 'Item Name', field: 'productname', sortable: true, filter: true, editable: true, width: 100 },
+    { headerName: 'Item Name(A)', field: 'productnameArabic', sortable: true, filter: true, editable: true, width: 125 },
+    { headerName: 'Warehouse', field: 'toWarehouse', sortable: true, filter: true, editable: true, width: 100 },
+    { headerName: 'Unit', field: 'unit', sortable: true, filter: true, editable: true, width: 70 },
+    { headerName: 'Availability in req. W/H', field: 'availability', sortable: true, filter: true, editable: true, width: 155 },
+    { headerName: 'Availability in Branch', field: 'availabilityBranch', sortable: true, filter: true, editable: true, width: 145 },
+    { headerName: 'Requested Qty', field: 'requestedQty', sortable: true, filter: true, editable: true, width: 125 },
+    { headerName: 'Reason', field: 'reason', sortable: true, filter: true, editable: true, width: 90 }
   ];
 
   rowData = [

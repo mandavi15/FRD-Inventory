@@ -43,7 +43,7 @@
   padding-top: 4px;
   border: 0;
   background: transparent;
-  font-size: 12px;
+  font-size: 11px;
   color: #676565;
 }
 
@@ -1356,7 +1356,7 @@ pre code {
 .table .thead-dark th {
 	color: #fafafa;
 	background-color: #212529;
-	border-color: #32383e
+	border-color: #32383eFf
 }
 .table .thead-light th {
 	color: #495057;
@@ -9543,7 +9543,7 @@ legend {
 	outline: 0
 }
 .form-check, label {
-  font-size: 12px !important;
+  font-size: 11px !important;
   line-height: 1.42857;
   color: #393939;
   font-weight: 400;
@@ -11373,7 +11373,7 @@ filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   text-align: left;
   color: #393939;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 11px;
 }
 .card .card-body .col-form-label.label-checkbox, .card .card-body .label-on-right.label-checkbox {
 	padding-top: 13px

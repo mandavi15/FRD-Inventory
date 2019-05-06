@@ -152,9 +152,52 @@ select.selectpicker option:hover {
   font-size: 12px;
   color: #393939
 }
-
 .mrnHead {
   font-size: 13px !important;
-  color: #26887f;
+  color: #3b4443;
   font-weight: 600;
+}
+a.mrnHead {
+  font-size: 13px !important;
+  color: #3b4443;
+  font-weight: 600;
+}
+.formBox {
+  background: #e9f3f2;
+  border: 1px solid #d3d6d6;
+  padding: 5px !important;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.card-header .card-link::before {
+  font-family: 'FontAwesome';
+   content: '\f068';
+  float: left;
+  color: #3b4443;
+  padding-right: 6px;
+  font-weight: lighter;
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in;
+}
+
+.card-header .card-link.collapsed::before {
+  font-family: 'FontAwesome';
+  color: #3b4443;
+  content: '\f067';
+  transition: all 0.8s ease-in;
+}
+#accordion .card .card-header {
+  background: #b1cecb !important;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #26a69a !important;
+  padding: .5rem 0.5rem !important;
+}
+
+#accordion .card .card-body {
+  padding: 0 0 0.7rem !important;
+}
+
+.form-group {
+   margin-top: 0px !important
 }
