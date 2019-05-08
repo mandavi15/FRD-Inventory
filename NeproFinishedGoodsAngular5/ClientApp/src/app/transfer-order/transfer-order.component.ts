@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-transfer-order',
-  templateUrl: './transfer-order.component.html'
+  templateUrl: './transfer-order.component.html',
 
 })
 
@@ -19,7 +19,7 @@ export class TransferOrderComponent {
     { headerName: 'Shipped Date', field: 'shippedDate', sortable: true, filter: true, width: 140 },
     { headerName: 'Received Date', field: 'receivedDate', sortable: true, filter: true, width: 140 },
     { headerName: 'Status', field: 'status', sortable: true, filter: true, width: 90 },
-    { headerName: '', field: '', width: 115 }
+    { headerName: '', field: '', width: 200 }
   ];
 
   rowData2 = [

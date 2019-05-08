@@ -1,10 +1,10 @@
 <div class="content">
   <div class="container-fluid">
     <div class="card-body pull-right p-1">
-         <button class="btn btn-success btn-sm" (click)="showhide()"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
-      <!--<button class="btn btn-success btn-sm" (click)="showhide2()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Submit</button>
+      <button class="btn btn-success btn-sm" (click)="showhide()"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
+      <!--<button class="btn btn-success btn-sm" (click)="showhide2()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Submit</button>-->
 
-      <button class="btn btn-success btn-sm" (click)="showhide2()"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>-->
+      <button class="btn btn-success btn-sm" (click)="showhide2()"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
     </div>
     <div class="clearfix"></div>
 
@@ -14,7 +14,31 @@
   <div class="content">
     <div class="container-fluid">
       <div class="clearfix"></div>
-      <div class="row">
+
+      <div class="row  mb-5" *ngIf="hide">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-text">
+                <h4 class="card-title">Role Creation</h4>
+              </div>
+              <h4 class="card-title"></h4>
+            </div>
+            <div class="card-body mt-1">
+              <div class="table-responsive">
+
+                <ag-grid-angular data-toggle="modal" data-target="#editRole" style="width:100%; height: auto; max-height:350px"
+                                 class="ag-theme-balham"
+                                 [rowData]="rowData1"
+                                 [columnDefs]="columnDefs1"></ag-grid-angular>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row" *ngIf="show">
         <div class="col-md-12">
           <div class="card ">
             <div class="card-header card-header-rose card-header-text">
@@ -28,7 +52,7 @@
                   <div class="row mb-2">
                     <div class="col-md-6">
                       <div class="row">
-                        <label class="col-sm-2 col-md-2 col-form-label">Role</label>
+                        <label class="col-sm-3 col-md-3 col-form-label">Security Role:</label>
                         <div class="col-sm-7 col-md-7">
                           <div class="form-group">
                             <input type="text" class="form-control">
@@ -36,10 +60,10 @@
                         </div>
                       </div>
                     </div>
-                   
+
                     <div class="col-md-6">
                       <div class="row">
-                        <label class="col-sm-2 col-md-2 col-form-label">Description</label>
+                        <label class="col-sm-3 col-md-3 col-form-label">Description:</label>
                         <div class="col-sm-7 col-md-7">
                           <div class="form-group">
                             <input type="text" class="form-control">
@@ -47,13 +71,13 @@
                         </div>
                       </div>
                     </div>
-                    
 
-                
+
+
 
                     <!--<div class="col-md-12 ">
-                      <button class="btn pull-right btn-success btn-sm"><i aria-hidden="true" class="fa fa-plus"></i>Add</button>
-                    </div>-->
+                  <button class="btn pull-right btn-success btn-sm"><i aria-hidden="true" class="fa fa-plus"></i>Add</button>
+                </div>-->
                   </div>
                 </div>
 
@@ -70,9 +94,67 @@
           </div>
         </div>
       </div>
-    
+
+
+
     </div>
   </div>
 </div>
 
 
+<div class="modal fade" id="editRole" role="dialog">
+  <div class="modal-dialog  modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span class="cross">&times;</span></button>
+        <h4 class="modal-title modalHead">Role Details</h4>
+      </div>
+      <div class="modal-body">
+        <div class="col-md-12 p-0">
+          <div class="card-body p-0">
+            <form method="get" class="form-horizontal mb-2">
+              <div class="container">
+                <div class="row p-0">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <label class="col-sm-4 col-md-4 col-form-label p-0">Security Role:</label>
+                      <label class="col-sm-7 col-md-7 col-form-label p-0">Role 1</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="row">
+                      <label class="col-sm-4 col-md-4 col-form-label p-0">Description:</label>
+                      <label class="col-sm-7 col-md-7 col-form-label p-0">Description 1</label>
+                    </div>
+                  </div>
+                                   
+                  <div class="col-md-12 p-0 mt-3">
+                    <button class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-plus"></i>Add</button>
+                    <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+            <div class="table-responsive">
+
+              <ag-grid-angular style="width:100%; height: auto"
+                               class="ag-theme-balham"
+                               [rowData]="rowData2"
+                               [columnDefs]="columnDefs2"></ag-grid-angular>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm mr-2" data-dismiss="modal">Submit</button>
+
+      </div>
+    </div>
+
+  </div>
+</div>

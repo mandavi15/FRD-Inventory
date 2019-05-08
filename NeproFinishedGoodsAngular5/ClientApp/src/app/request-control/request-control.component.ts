@@ -82,7 +82,7 @@ export class RequestControlComponent {
     { headerName: 'Created On', field: 'requesteddata', sortable: true, filter: true, width: 130 },
     { headerName: 'Submitted Date', field: 'submitteddata', sortable: true, filter: true, width: 180 },
     { headerName: 'Status', field: 'status', sortable: true, filter: true, width: 80 },
-    { headerName: '', field: '', width: 355 }
+    { headerName: '', field: '', width: 435 }
 
   ];
 

@@ -12,7 +12,7 @@ export class RoleMasterComponent {
   }
 
   columnDefs = [
-    { headerName: 'Sl No.', field: 'slNo', sortable: true, filter: true, width: 90 },
+    { headerName: 'Sr No.', field: 'slNo', sortable: true, filter: true, width: 90 },
     { headerName: 'Role', field: 'role', sortable: true, filter: true, width: 190 },
     { headerName: '', field: '', width: 760 }
 

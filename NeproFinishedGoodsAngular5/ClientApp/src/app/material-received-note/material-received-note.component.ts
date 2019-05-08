@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: 'app-material-received-note',
   templateUrl: './material-received-note.component.html'
@@ -25,10 +24,10 @@ export class MaterialReceivedNoteComponent {
 
   columnDefs = [
     { headerName: 'Vendor Code', field: 'vendorCode', sortable: true, filter: true, width: 110 },
-    { headerName: 'Vendor Name', field: 'vendorname', sortable: true, filter: true, width: 110 },
+    { headerName: 'Vendor Name', field: 'vendorname', sortable: true, filter: true, width: 125 },
     { headerName: 'PO Number', field: 'PON', sortable: true, filter: true, width: 125 },
     { headerName: 'Status', field: 'status', sortable: true, filter: true, width: 100 },
-    { headerName: ' ', field: ' ', width: 580}
+    { headerName: ' ', field: ' ', width: 560}
   ];
 
   rowData = [
@@ -40,10 +39,10 @@ export class MaterialReceivedNoteComponent {
   ];
 
   columnDefs1 = [
-    { headerName: 'Item No.', field: 'itemno', sortable: true, filter: true, width: 84 },
-    { headerName: 'Item Name', field: 'productname', sortable: true, filter: true, width: 96 },
-    { headerName: 'Item Name(A)', field: 'productnameArabic', sortable: true, filter: true, width: 112 },
-    { headerName: 'Configuration', field: 'configuration', sortable: true, filter: true, width: 110 },
+    { headerName: 'Item No.', field: 'itemno', sortable: true, filter: true, width: 90 },
+    { headerName: 'Item Name', field: 'productname', sortable: true, filter: true, width: 105 },
+    { headerName: 'Item Name(A)', field: 'productnameArabic', sortable: true, filter: true, width: 120 },
+    { headerName: 'Configuration', field: 'configuration', sortable: true, filter: true, width: 120 },
     { headerName: 'Remaining Qty', field: 'remQty', sortable: true, filter: true, width: 117 },
     { headerName: 'Unit', field: 'unit', sortable: true, filter: true, width: 70 },
     { headerName: 'Received Qty', field: 'receivedQty', sortable: true, filter: true, width: 110 },
@@ -67,7 +66,7 @@ export class MaterialReceivedNoteComponent {
     ];
   
   columnDefs2 = [
-    { headerName: 'Configuration', field: 'config', sortable: true, filter: true, width: 110 },
+    { headerName: 'Configuration', field: 'config', sortable: true, filter: true, width: 120 },
     { headerName: 'Batch No.', field: 'batchNo', sortable: true, filter: true, width: 110 },
     { headerName: 'Expiry Date', field: 'expiryDate', sortable: true, filter: true, width: 125 },
     { headerName: 'Quantity', field: 'qty', sortable: true, filter: true, width: 100 },
@@ -103,5 +102,7 @@ export class MaterialReceivedNoteComponent {
     { PON: 'PO-1', vendorname: 'Fateh', MRNno: 'MRN-01', activityNo: 'Act 1', MRNDate: '02/05/2019', activityDate: '02/05/2019', receivedQty: '50' },
     { PON: 'PO-1', vendorname: 'Fateh', MRNno: 'MRN-01', activityNo: 'Act 1', MRNDate: '02/05/2019', activityDate: '02/05/2019', receivedQty: '50' }
   ];
-
- }
+}
+export class AppComponent {
+  checked: boolean;
+}

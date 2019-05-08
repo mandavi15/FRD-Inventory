@@ -22,7 +22,7 @@
         "../node_modules/ag-grid-community/dist/styles/ag-grid.css",
         "../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css"
       ],
-      "scripts": [  ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

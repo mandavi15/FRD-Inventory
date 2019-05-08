@@ -10,7 +10,7 @@ import { ColumnApi, GridApi } from 'ag-grid-community';
 
 @Component({
     selector: 'app-user',
-    templateUrl: './user.component.html'
+    templateUrl: './user.component.html',
   
 })
 /** user component*/
@@ -102,6 +102,7 @@ export class UserComponent implements OnInit{
    // this.userForm.controls['username'].setValue(temp.userName);
     //(<FormControl>this.userForm.controls['username']).setValue(temp.userName);
     //this.userForm.value.username.setValue(temp.userName);
+
     this.hide = true;
    // alert(this.hide);
     alert(temp.userName);
@@ -129,14 +130,25 @@ export class UserComponent implements OnInit{
   }
    
   columnDefs1 = [
+    { headerName: 'User Pin', field: 'userPin', sortable: true, filter: true, width: 100 },
     { headerName: 'User Name', field: 'userName', sortable: true, filter: true, width: 150 },
-    { headerName: 'E-mail', field: 'emailId', sortable: true, filter: true, width: 190 },  
-    { headerName: 'User Pin', field: 'userPin', sortable: true, filter: true, width: 100},
+    { headerName: 'E-mail ID', field: 'emailId', sortable: true, filter: true, width: 190 },  
+    { headerName: 'AX Employee No.', field: 'empNo', sortable: true, filter: true, width: 190 },  
     { headerName: 'Status', field: 'status', sortable: true, filter: true, width: 100 },
-    { headerName: '', field: '', width: 470 }
+    { headerName: '', field: '', width: 300 }
  ];
 
-  rowData1 = [];
+  rowData1 = [
+    { userPin: '1234', userName: 'Amit', emailId: 'amit@gmail.com', empNo: 'EMP-01', status: 'Active' },
+    { userPin: '1234', userName: 'Amit', emailId: 'amit@gmail.com', empNo: 'EMP-01', status: 'Active' },
+    { userPin: '1234', userName: 'Amit', emailId: 'amit@gmail.com', empNo: 'EMP-01', status: 'Active' },
+    { userPin: '1234', userName: 'Amit', emailId: 'amit@gmail.com', empNo: 'EMP-01', status: 'Active' },
+    { userPin: '1234', userName: 'Amit', emailId: 'amit@gmail.com', empNo: 'EMP-01', status: 'Active' },
+    { userPin: '1234', userName: 'Amit', emailId: 'amit@gmail.com', empNo: 'EMP-01', status: 'Active' },
+    { userPin: '1234', userName: 'Amit', emailId: 'amit@gmail.com', empNo: 'EMP-01', status: 'Active' },
+    { userPin: '1234', userName: 'Amit', emailId: 'amit@gmail.com', empNo: 'EMP-01', status: 'Active' },
+    { userPin: '1234', userName: 'Amit', emailId: 'amit@gmail.com', empNo: 'EMP-01', status: 'Active' }
+  ];
 
   columnDefs = [
     { headerName: 'Role', field: 'role', sortable: true, filter: true, width: 210 },

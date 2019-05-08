@@ -10,12 +10,12 @@
 </div>-->
 
 <div class='wrapper' >
-  <app-nav-menu *ngIf='(this.router1.url !== "/login")'></app-nav-menu>
+  <app-nav-menu *ngIf='(this.router1.url !== "/login" && this.router1.url !== "/")'></app-nav-menu>
   <div class='main-panel' >   
-      <app-header *ngIf='(this.router1.url !== "/login")'></app-header>
+      <app-header *ngIf='(this.router1.url !== "/login" && this.router1.url !== "/")'></app-header>
       <router-outlet></router-outlet>
   
-      <app-footer *ngIf='(this.router1.url !== "/login")'></app-footer>
+      <app-footer *ngIf='(this.router1.url !== "/login" && this.router1.url !== "/")'></app-footer>
     </div>
   </div>
 <router-outlet *ngIf='this.router1.url === "/login" '></router-outlet>
