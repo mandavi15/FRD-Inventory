@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
 
 
           sessionStorage.setItem('username', this.userForm.controls['EmailId'].value);
-          this._router.navigate(['/itemRequest']);
+          this._router.navigate(['/user']);
 
 
         }
