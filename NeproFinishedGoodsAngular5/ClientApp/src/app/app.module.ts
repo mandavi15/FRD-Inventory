@@ -26,6 +26,8 @@ import { UserComponent } from './user/user.component';
 import { UserAccount } from './Services/AccountService';
 import { HttpModule } from '@angular/http';
 import { AuthGuard } from './auth.guard';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { AuthGuard } from './auth.guard';
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule, HttpModule, AgGridModule.withComponents([]),
-    FormsModule, ReactiveFormsModule, BrowserAnimationsModule, TreeViewModule,
+    FormsModule, ReactiveFormsModule, BrowserAnimationsModule, TreeViewModule, OwlDateTimeModule,
+    OwlNativeDateTimeModule, 
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
       { path: 'itemRequest', canActivate: [AuthGuard], component: ItemRequestComponent },

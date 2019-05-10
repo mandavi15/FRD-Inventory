@@ -8,10 +8,16 @@ import { Component } from '@angular/core';
 /** itemRequest component*/
 export class RoleCreationComponent {
   public show: boolean = false;
+  public show1: boolean = false;
   public hide: boolean = true;
 
   showhide() {
     this.show = true;
+    this.hide = false;
+
+  }
+  showhide1() {
+    this.show1 = true;
     this.hide = false;
 
   }
@@ -73,6 +79,24 @@ export class RoleCreationComponent {
     { warehouse: 'NAR-A', role: 'Transfer Material Required' },
     { warehouse: 'MAL', role: 'Consumption Inventory Counting' },
     { warehouse: 'MWH', role: 'Wastage' }
+
+  ];
+
+  columnDefs3 = [
+    { headerName: 'Role', field: 'role', sortable: true, filter: true, width: 180 },
+    { headerName: 'Role Name', field: 'roleName', sortable: true, filter: true, width: 300 },
+    { headerName: '', field: '', width: 550 }
+
+  ];
+
+  rowData3 = [
+    { role: 'Material Receipt Note', roleName: 'Role 1' },
+    { role: 'Batch', roleName: 'Role 2' },
+    { role: 'Material Required', roleName: 'Role 3' },
+    { role: 'Received Material Required', roleName: 'Role 4' },
+    { role: 'Consumption Inventory Counting', roleName: 'Role 5' },
+    { role: 'Transfer Material Required', roleName: 'Role 6' },
+    { role: 'Wastage', roleName: 'Role 7' }
 
   ];
 }

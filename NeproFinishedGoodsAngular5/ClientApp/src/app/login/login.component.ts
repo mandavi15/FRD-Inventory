@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
   }
 
 
-
-
   LoginUser() {
 
     if (!this.userForm.valid) {
@@ -54,7 +52,7 @@ export class LoginComponent implements OnInit {
 
           sessionStorage.setItem('username', this.userForm.controls['EmailId'].value);
           this._router.navigate(['/user']);
-
+         
 
         }
         else {
