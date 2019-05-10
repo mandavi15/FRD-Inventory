@@ -1,3 +1,4 @@
+@import "~ng-pick-datetime/assets/style/picker.min.css";
 .sidebar .logo {
   background: transparent !important; padding:10px 0 !important
 }
@@ -247,9 +248,7 @@ a.mrnHead {
 }
 .selectedItem {
   background: #b1cecb !important;
-  margin: 0;
-  padding-top: 5px !important;
-  padding-bottom: 0 !important;
+
 }
 #resetPass .modal-dialog .modal-body {
   padding: 15px;
@@ -258,7 +257,8 @@ a.mrnHead {
   padding-left: 30px;
 }
 .sidebar .nav .caret {
-  margin-top: -8px !important;
+  margin-top: -9px !important;
   position: absolute !important;
   right: 28px !important;
 }
+

@@ -110,7 +110,13 @@
                             <label class="col-sm-3 col-md-4 col-form-label">MRN Date:</label>
                             <div class="col-sm-8 col-md-8">
                               <div class="form-group">
-                                <input type="date" class="form-control">
+                                <!--<input type="date" class="form-control">-->
+                                <div class="form-control">
+                                 
+                                  <input [owlDateTime]="dt2" placeholder="dd/mm/yyyy">
+  <span [owlDateTimeTrigger]="dt2"><i class="fa fa-calendar"></i></span>
+  <owl-date-time #dt2></owl-date-time>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -396,7 +402,7 @@
           </div>
 
         </div>
-        <button class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-plus pr-1"></i>Add</button>
+        <button class="btn btn-success btn-sm pull-right"><i aria-hidden="true" class="fa fa-plus pr-1"></i>Add</button>
 
       </div>
       <div class="modal-footer" style="display:block;text-align:center;margin: 0px 7px;padding-top: 16px;border-top: 1px solid #e0e4e4;">

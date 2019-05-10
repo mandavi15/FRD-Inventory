@@ -10,7 +10,7 @@ import { ColumnApi, GridApi } from 'ag-grid-community';
 
 @Component({
     selector: 'app-user',
-    templateUrl: './user.component.html',
+    templateUrl: './user.component.html'
   
 })
 /** user component*/
@@ -163,8 +163,13 @@ export class UserComponent implements OnInit{
     { role: 'Received Material Required', rolename: 'Role Name 4' },
     { role: 'Transfer Material Required', rolename: 'Role Name 5' },
     { role: 'Consumption Inventory Counting', rolename: 'Role Name 6' },
-    { role: 'Wastage', rolename: 'Role Name 7' }
+    { role: 'Wastage', rolename: 'Role Name 7' },
   ];
+
+  roles = ["Role 1", "Role 2", "Role 3", "Role 4", "Role 5", "Role 6", "Role 7", "Role 8", "Role 9", "Role 10", "Role 11", "Role 12", "Role 13", "Role 14", "Role 15", "Role 16", "Role 17", "Role 18", "Role 19", "Role 20", "Role 21", "Role 22", "Role 23", "Role 24"];
+  activateClass(role) {
+    role.selectedItem = !role.selectedItem;
+
+  }
+  //hightlightStatus: Array<boolean> = [];
  }
-
-
