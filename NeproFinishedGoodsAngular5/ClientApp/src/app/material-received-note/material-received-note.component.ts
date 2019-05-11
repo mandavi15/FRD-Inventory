@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-material-received-note',
-  templateUrl: './material-received-note.component.html'
+  templateUrl: './material-received-note.component.html',
 })
 /** itemRequest component*/
 export class MaterialReceivedNoteComponent {
